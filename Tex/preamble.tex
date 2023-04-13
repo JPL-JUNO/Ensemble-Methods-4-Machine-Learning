@@ -1,0 +1,18 @@
+% \usepackage{subcaption}
+\usepackage{graphicx}
+\setkeys{Gin}{width=.75\textwidth}
+\usepackage{enumitem}
+% 去掉enumerate、itemize、description中的间隙
+\setlist{noitemsep, topsep=1pt}
+\usepackage{tcolorbox}
+\definecolor{SWJTU}{HTML}{205483}
+\tcbuselibrary{breakable}
+\tcbset{breakable, colframe=SWJTU}
+\newcommand\important[1]{\textbf{\textcolor{SWJTU}{#1}}}
+\usepackage[
+    bottom=1.77cm,
+    left=2.75cm,
+    right=2.75cm,
+    % marginparwidth=1.5cm,     % + <- Width of your marginpar
+    % marginparsep=5mm,       % + <- Gap between text block and marginpar
+]{geometry}

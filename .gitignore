@@ -1,0 +1,7 @@
+.aux
+.log
+Tex/main.synctex.gz
+Tex/main.log
+Tex/main.aux
+Tex/Ch01.aux
+__pycache__/train_vs_test.cpython-311.pyc
