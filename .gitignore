@@ -9,3 +9,6 @@ __pycache__/make_dataset.cpython-311.pyc
 __pycache__/visualization.cpython-311.pyc
 Tex/Ch02.aux
 Tex/.aux
+__pycache__/Ch02_bagging_with_sklearn.cpython-311.pyc
+__pycache__/Ch02_bagging_with_decision_tree.cpython-311.pyc
+Data/SequentialVsParallelBagging.pickle
