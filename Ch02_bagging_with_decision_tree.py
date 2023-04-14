@@ -59,4 +59,24 @@ if __name__ == '__main__':
                           n_estimators=500,
                           max_depth=12, max_samples=100)
     y_pred = bagging_predict(X_test, bag_ens)
-    print(accuracy_score(y_test, y_pred))
+    ensemble_acc = accuracy_score(y_test, y_pred)
+    print(ensemble_acc)
+
+    tree = DecisionTreeClassifier(max_depth=12)
+    y_pred_single = tree.fit(X_train, y_train).predict(X_test)
+    tree_acc = accuracy_score(y_test, y_pred_single)
+    print('Single Decision Tree: Holdout tes accuracy = {0:4.2f}'.format(
+        tree_acc * 100))
+
+    import matplotlib.pyplot as plt
+    from visualization import plot_2d_classifier
+
+    fig, ax = plt.subplots(1, 2, figsize=(8, 4))
+    title = 'Single Decision Tree (acc = {0:4.2f}%)'.format(tree_acc * 100)
+    plot_2d_classifier(ax[0], X, y, colormap='RdBu', alpha=.3,
+                       predict_function=tree.predict, xlabel='$x_1$', ylabel='$x_2$',
+                       title=title)
+    title = 'Bagging Ensemble (acc = {0:4.2f}%)'.format(ensemble_acc * 100)
+    plot_2d_classifier(ax[1], X, y, colormap='RdBu', alpha=.3,
+                       predict_function=bagging_predict, predict_args=(
+                           bag_ens), xlabel='$x_1$', ylabel='$x_2$', title=title)
