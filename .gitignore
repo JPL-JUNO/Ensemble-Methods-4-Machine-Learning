@@ -12,3 +12,7 @@ Tex/.aux
 __pycache__/Ch02_bagging_with_sklearn.cpython-311.pyc
 __pycache__/Ch02_bagging_with_decision_tree.cpython-311.pyc
 Data/SequentialVsParallelBagging.pickle
+Data/ErrorVsNumEstimators.pickle
+Data/ErrorVsNumLeaves.pickle
+Tex/main.out
+Tex/Ch03.aux

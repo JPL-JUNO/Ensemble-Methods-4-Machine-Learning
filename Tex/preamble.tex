@@ -1,5 +1,8 @@
 % \usepackage{subcaption}
 \usepackage{graphicx}
+\usepackage{bm}
+\usepackage{subcaption}
+\usepackage{caption}
 \setkeys{Gin}{width=.75\textwidth}
 \usepackage{enumitem}
 % 去掉enumerate、itemize、description中的间隙
@@ -24,3 +27,16 @@
     % marginparwidth=1.5cm,     % + <- Width of your marginpar
     % marginparsep=5mm,       % + <- Gap between text block and marginpar
 ]{geometry}
+
+\usepackage{hyperref}
+\usepackage[english]{babel}
+\addto\extrasenglish{
+    \def\chapterautorefname{Chapter}
+}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=SWJTU,
+    filecolor=SWJTU,
+    urlcolor=SWJTU,
+    citecolor=SWJTU,
+}

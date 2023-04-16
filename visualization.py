@@ -90,7 +90,7 @@ def plot_2d_classifier(ax: Axes, X: ndarray, y: ndarray, predict_function,
 
     ax.contourf(xMesh, yMesh, zMesh, cmap=colormap,
                 alpha=alpha, antialiased=True)
-    if boundary_level is None:
+    if boundary_level is not None:
         ax.contour(xMesh, yMesh, zMesh, [
                    boundary_level], linewidths=3, colors='k')
 
